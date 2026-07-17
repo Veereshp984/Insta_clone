@@ -6,6 +6,11 @@
 
 ==> Post
     => create
+        -> {
+            caption : String,
+            img_url : url,
+            user : user_id
+        }
     =>can see the feed
     => like posts (collection types)
     => save posts
