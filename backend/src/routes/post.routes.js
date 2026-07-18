@@ -7,7 +7,8 @@ const  {identifyUser}  = require("../middlewares/auth.middleware")
 
 
 /**
- * POST /api/posts [protected only with valid token]
+ * @Routes POST /api/posts [protected only with valid token]
+ * @description create a post with the content and caption provided in the req body
  * - req.body = {caption , image-file}
  */
 
@@ -15,19 +16,25 @@ const  {identifyUser}  = require("../middlewares/auth.middleware")
 postRouter.post("/",upload.single("image"), identifyUser ,postController.createPostController)
 
 /**
- * GET /api/posts/ [protected]
+ * @Route GET /api/posts/ [protected]
+ * @description return an detail about post created by the user
  */
 postRouter.get("/",identifyUser,postController.getPostController);
 
 /**
- * GET /api/posts/details/:postid
- * - return detail about specific post with the id. also check whether the post
+ * @Route GET /api/posts/details/:postid
+ *  @description- return detail about specific post with the id. also check whether the post
  * belongs to the user that is request come from 
  */
 
 postRouter.get("/details/:postId",identifyUser,postController.getPostDetailsController)
 
 
+/**
+ * @route Post /api/posts/like/:postid
+ * @description like a post with the id provided in the request params
+ */
+postRouter.post("/like/:postId", identifyUser ,postController.likePostController )
 
 
 
