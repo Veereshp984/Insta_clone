@@ -1,0 +1,184 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.feed-page {
+  min-height: 900px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.posts {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 1rem;
+}
+
+.post {
+  width: 100%;
+  color: #fff;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 14px;
+
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .profile {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      padding: 2px;
+      background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+      );
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid black;
+        display: block;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      span {
+        margin-top: 2px;
+        font-size: 12px;
+        color: #b3b3b3;
+      }
+    }
+  }
+
+  .menu-icon {
+    font-size: 22px;
+    cursor: pointer;
+  }
+}
+
+/* ================= IMAGE ================= */
+
+.post-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+}
+
+/* ================= ACTIONS ================= */
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+
+  .left-icons {
+    display: flex;
+    gap: 18px;
+     margin-left: 1rem;
+  }
+
+  .icon {
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+.like{
+  color : red!important
+}
+/* ================= LIKES ================= */
+#likes{
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.likes {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+ 
+}
+
+/* ================= CAPTION ================= */
+
+.caption {
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+  align-items: center;
+  
+
+  .username {
+    font-weight: 500;
+    margin-right: 8px;
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* ================= COMMENTS ================= */
+
+
+
+/* ================= ADD COMMENT ================= */
+
+
+/* ================= TIME ================= */
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 500px) {
+  .feed-page {
+    padding: 0;
+  }
+
+  .posts {
+    max-width: 100%;
+  }
+
+  .post-image {
+    border-radius: 0;
+  }
+}
