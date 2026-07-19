@@ -1,0 +1,18 @@
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-inline: 1rem;
+   padding-block: 0.8rem;
+   background-color: #18181b;
+   border-bottom: 1px solid #2e2e2e;
+}
+
+.button{
+    background-color: #0095F6;
+    padding-inline: 0.5rem;
+    padding-block: 0.2rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}

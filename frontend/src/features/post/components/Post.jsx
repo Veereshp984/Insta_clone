@@ -2,11 +2,13 @@ import React from "react";
 import { FaRegHeart ,FaHeart, FaRegComment, FaRegBookmark } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import { BsThreeDots } from "react-icons/bs";
+import { usePost } from "../hook/usePost";
+
 
 const Post = ({ post }) => {
 
-  console.log(post);
-  console.log(post.isLiked);
+ const {handleLike , handleUnLike , loading } = usePost()
+
   
   
   return (
@@ -34,7 +36,7 @@ const Post = ({ post }) => {
       <div className="actions">
         <div className="left-icons">
           {
-            post.isLiked ? (<FaHeart className="icon like" id="likes"/>) : (<FaRegHeart className="icon" id="likes"/>)
+            post.isLiked ? (<FaHeart onClick={()=> handleUnLike(post._id)} className="icon like" id="likes"/>) : (<FaRegHeart onClick={()=> handleLike(post._id)} className="icon" id="likes"/>)
           }
           <FaRegComment className="icon" />
           <FiSend className="icon" />

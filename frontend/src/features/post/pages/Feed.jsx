@@ -10,6 +10,7 @@ import { FiSend } from "react-icons/fi";
 import { BsThreeDots } from "react-icons/bs";
 import Post from "../components/Post";
 import { usePost } from "../hook/usePost";
+import Nav from "../../shared/components/Nav";
 const Feed = () => {
 
 const {feed, handleGetFeed, loading} = usePost()
@@ -26,11 +27,15 @@ console.log(feed);
 
   return (
     <main className="feed-page">
-      <div className="posts">
+      <div className="feed">
+        <Nav/>
+         <div className="posts">
        {feed.map(post =>{
           return <Post key={post._id} post={post}/>
        })}
       </div>
+      </div>
+     
     </main>
   );
 };
